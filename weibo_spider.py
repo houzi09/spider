@@ -28,8 +28,6 @@ cookie=cookielib.CookieJar()
 #第二步：利用urllib2库的HTTPCookieProcessor对象
 hander=urllib2.HTTPCookieProcessor(cookie)
 
-headers = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}
-
 #第三步：得到一个opener
 opener=urllib2.build_opener(hander)
 request = urllib2.Request("http://weibo.cn/", headers=headers)
@@ -43,12 +41,11 @@ else:
     user_id = int(raw_input(u"请输入user_id: "))
 
 agent = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'}
+    'User-Agent': 'xxxxxx'}
 cookie = {
-    'Cookie': '_T_WM=47a585d1a07b2baa0f45fe641f1dfe7e; SUB=_2A2578QyDDeRxGedJ41IT9SbJzjuIHXVZHZTLrDV6PUJbrdBeLU3BkW1LHeuYt75k9b4KUO3dLz8FNu19qc28og..; SUHB=08J6pvl74_fGmw; SSOLoginState=1458928851; gsid_CTandWM=4uaTCpOz5Kd6kMhsJ7B997t7Q8Z; H5_INDEX=3; H5_INDEX_TITLE=%E9%82%A3%E5%8F%AA%E7%8C%B4%E5%AD%90_%E8%91%B5; M_WEIBOCN_PARAMS=featurecode%3D20000180%26oid%3D3957083668106947%26luicode%3D20000061%26lfid%3D3957083668106947'}
+    'Cookie': 'XXXXXX'}
 
-retcode = '&retcode=6102'
-# url = 'http://weibo.cn/u/%d?filter=1&page=1%s'%(user_id,retcode)
+
 # html = requests.get(url, cookies = cookie, headers = agent).content
 
 
@@ -85,7 +82,7 @@ while True:
 
     '''
       opener = urllib2.build_opener()
-      opener.addheaders.append(('Cookie', 'SUB=_2A257942-DeRxGedJ41IT9SbJzjuIHXVZGxP2rDV6PUJbstBeLVfykW1LHesNpN9U0sKFDn-EPtIqyOIkhVYCWg..; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WWO1IrMp.oGq_0OczG__xGW5JpX5o2p; SUHB=0LcTc9Y4LU3b8c; SSOLoginState=1458830830; _T_WM=47a585d1a07b2baa0f45fe641f1dfe7e; gsid_CTandWM=4uVzCpOz5GmWHWwGdqVif7t7Q8Z; H5_INDEX=3; H5_INDEX_TITLE=%E9%82%A3%E5%8F%AA%E7%8C%B4%E5%AD%90_%E8%91%B5; M_WEIBOCN_PARAMS=uicode%3D20000174'))
+      opener.addheaders.append(('Cookie', 'XXXXXX'))
       xx = opener.open(url)
     '''
 
